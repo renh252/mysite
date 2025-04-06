@@ -258,6 +258,8 @@ a.secondary {
 .ctaButtons {
   display: flex;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .primaryBtn,
@@ -364,18 +366,25 @@ a.secondary {
   background: linear-gradient(to right, var(--primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: block;
+  line-height: 1.2;
 }
 
 .statLabel {
   font-size: 1rem;
   font-weight: 500;
   color: var(--gray-400);
+  display: block;
+  margin-top: 0.25rem;
 }
 
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .skillCard {
@@ -483,8 +492,8 @@ a.secondary {
   }
 
   .aboutStats {
-    flex-direction: column;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .skillsGrid {
@@ -505,5 +514,21 @@ a.secondary {
 
   .ctaTitle {
     font-size: 1.75rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .statValue {
+    font-size: 2.25rem;
   }
 }
